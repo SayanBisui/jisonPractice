@@ -1,8 +1,6 @@
 
 /* description: Parses and executes mathematical expressions. */
-%{
-  var represent = require("./representation.js")
-%}
+
 /* lexical grammar */
 %lex
 %%
@@ -25,12 +23,12 @@
 
 expressions
     : e EOF
-        { console.log(represent($$)) }
+        { return $$ }
     ;
 
 e
     : e "+" e
-        {$$ = {parent:$2,leftChild:$1,rightChild:$3}}
+        {$$ = [$1, $2, $3]}
     | NUMBER
         {}
     ;

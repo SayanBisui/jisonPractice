@@ -87,7 +87,7 @@ case 1:
  console.log(represent(this.$)) 
 break;
 case 2:
-this.$ = {parent:$$[$0-1],leftChild:$$[$0-2],rightChild:$$[$0]}
+this.$ = [$$[$0-2], $$[$0-1], $$[$0]]
 break;
 }
 },
